@@ -1,0 +1,30 @@
+<button class="btn btn-primary" type="button" ng-click="logout()">Logout</button>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="hero-unit span5">
+            <h1>{{results.name}}</h1>
+            <h3>{{results.regId}}</h3>
+        </div>
+        <div class="hero-unit span5">
+            <h2><legend>Your score</legend></h2>
+            <h2>{{results.total}}</h2>
+        </div>
+        <div class="span7">
+            <table class="table table-condensed">
+                <tr>
+                    <th>Question</th>
+                    <th>Level</th>
+                    <th>Answer</th>
+                </tr>
+                <tr ng-repeat="answer in results.answers" ng-class="{success:answer.correct==1,error:answer.correct==0}">
+                    <td>{{$index+1}}</td>
+                    <td>{{answer.level}}</td>
+                    <td><label ng-show="answer.correct==1">R</label><label ng-show="answer.correct==0">W</label></td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+</div>

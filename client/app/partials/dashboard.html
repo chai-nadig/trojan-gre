@@ -1,0 +1,26 @@
+<button class="btn btn-primary" type="button" ng-click="logout()">Logout</button>
+<h2>{{msg}}</h2>
+
+
+<div class="container">
+    <div class="row-fluid">
+        <div class="span2"></div>
+        <div class="span7">
+            <form>
+                <fieldset>
+                    <legend>Question {{qNumber}}:</legend>
+                    <label>{{question.question}}</label>
+                    <input type="radio" ng-model="choice" value="{{question.answer_a}}"> {{question.answer_a}}<br>
+                    <input type="radio" ng-model="choice" value="{{question.answer_b}}"> {{question.answer_b}}<br>
+                    <input type="radio" ng-model="choice" value="{{question.answer_c}}"> {{question.answer_c}}<br>
+                    <input type="radio" ng-model="choice" value="{{question.answer_d}}"> {{question.answer_d}}<br>
+
+                </fieldset>
+                <hr>
+                <a class="btn" ng-click="submitAnswer()">Next question</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+

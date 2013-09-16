@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row-fluid">
+        <div class="span2"></div>
+        <div class="span7">
+            <form>
+                <fieldset>
+                    <legend>Login Here!</legend>
+                    <label>Registeration ID:</label>
+                    <input ng-model="regId" type="text" placeholder="Enter registration id"/>
+                    <label>Password</label>
+                    <input ng-model="password" type="password"/>
+                </fieldset>
+            </form>
+            <a class="btn" ng-click="login()">Login</a>
+            <a class="btn" ng-click="go('/register')">Register</a>
+        </div>
+    </div>
+</div>

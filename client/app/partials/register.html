@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row-fluid">
+        <div class="span2"></div>
+        <div class="span7">
+            <form name="registerForm">
+                <fieldset>
+                    <legend>New Student Registration</legend>
+                    <label>Email</label>
+                    <input name="emailAddr" ng-model="emailAddr" type="email" placeholder="Your email address" required/>
+                    <span class="error" ng-show="registerForm.emailAddr.$error" ng-hide="registerForm.emailAddr.$valid">Required!</span>
+                    <label>Name</label>
+                    <input name="name" ng-model="fullName" type="text" placeholder="Full Name" required/>
+                    <span class="error" ng-show="registerForm.name.$error" ng-hide="registerForm.name.$valid">Required!</span>
+                    <label>Age</label>
+                    <input ng-model="age" type="number" placeholder="How old are you?"/>
+                    <label>Enter a password</label>
+                    <input name="pwd" ng-model="password" type="password" required/>
+                    <span class="error" ng-show="registerForm.pwd.$error" ng-hide="registerForm.pwd.$valid">Required!</span>
+                </fieldset>
+                <input class="btn" type="submit" ng-disabled="!registerForm.$valid" ng-click="register()" value="Register Me!"/>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div>
+    <script type="text/ng-template" id="registrationModal.html">
+        <div class="modal-header">
+            <h3>Registration Complete!</h3>
+        </div>
+        <div class="modal-body">
+            <label>Your registration number is <span class="label label-info">{{regId}} </span> </label>
+        </div>
+        <div class="modal-footer">
+            <label>Use the registration number to login. <button class="btn btn-primary" ng-click="ok()">OK</button></label>
+
+        </div>
+    </script>
+</div>
